@@ -28,8 +28,7 @@ async def select_users():
     sunday = monday + timedelta(days=7, hours=0, minutes=0, seconds=0)
     result = await Weekly.filter(Q(create_time__gte=monday)).filter(
         Q(create_time__lte=sunday)).all().only("user_id").distinct().values_list("user_id")
-
-    return [x for x in result[0]] if result else []
+    return [x[0] for x in result] if result else []
 
 
 async def insert_weekly(user_id: str, content: str):

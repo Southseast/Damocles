@@ -58,7 +58,7 @@ async def weekly_receive(event: GroupMessageEvent, args: Message = CommandArg())
             await weekly.send("数据库爆炸了" + MessageSegment.mention(user_id))
 
 
-@scheduler.scheduled_job("cron", hour='10, 17', minute='10', id="weekly_push", max_instances=3, misfire_grace_time=600)
+@scheduler.scheduled_job("cron", hour='9, 17', minute='30', id="weekly_push", max_instances=3, misfire_grace_time=600)
 async def weekly_push():
     for bot_id in nonebot.get_bots():
         bot = nonebot.get_bots()[bot_id]
