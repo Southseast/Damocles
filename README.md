@@ -14,9 +14,10 @@ BinX 知识学爆计划
 
 ![1.png](images/1.png)
 
-## feature
+## Feature
 
 - [x] 周报 weekly
+- [x] RSS推送 rss
 
 ## Refer
 

@@ -11,8 +11,8 @@ class RSS_Subscription(Model):
     status = fields.BooleanField(description="启用状态")
 
     class Meta:
-        table = "damocles_weekly_subscription"
-        table_description = "周报订阅记录"
+        table = "damocles_rss_subscription"
+        table_description = "RSS订阅记录"
 
 
 async def update_rss_subscription(subscriber_id, bot_id, status):
